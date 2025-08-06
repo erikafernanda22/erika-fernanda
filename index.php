@@ -16,4 +16,24 @@
     echo "<hr>";
     $datahora = date('d/m/Y H:i:s');
     echo "Data atual: ".$datahora;
+    echo "<hr>";
+    $data1 = new DateTime('2025-01-01');
+    //Data: 2025-01-01 22:30:23 = Y-m-d H:i:s
+    $data2 = new DateTime('2025-08-06');
+    $intervalo = $data1->diff($data2);
+    echo "A diferença em anos: ".$intervalo->y."<br>";
+    echo "A diferença em meses: ".$intervalo->m. "<br>";
+    echo "A diferença em dias: ".$intervalo->days. "<br>";
+    $horas = $intervalo->days*24;
+    echo "A diferença em horas: ".$horas;
+    echo "<hr>";
+    echo "<h2>função condicional - IF</h2><br>";
+    $a = 3;
+    $b = 5;
+    if ($a > $b) {
+        echo "<br>A é maior que B!";
+    } else { 
+        echo "<br>B é maior que A!";
+    }
+    echo "<br>Saiu do IF";
 ?>
